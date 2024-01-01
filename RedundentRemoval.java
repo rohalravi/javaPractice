@@ -66,6 +66,7 @@ class RedundentRemoval {
         
         System.out.println(char_map.toString());
         System.out.println(char_map);
+        System.out.println("PPPP");
 
     }
 
