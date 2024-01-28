@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.ListIterator;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -16,7 +17,9 @@ public class set {
     public static void main(String[] args){
         //setUnionIntersectionDifference();
         //setAddRemove();
-        sortingSet();
+        //sortingSet();
+        readUserValue();
+        
      }
 
      //Set methods for add, remove, clear, addAll, removeAll, retainAll
@@ -82,6 +85,42 @@ public class set {
         Collections.sort(sorted2);
         System.out.println("Sorted list 2:-"+sorted2);
         
+     }
+
+     //example of taking input from user 
+     public static void readUserValue(){
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Enter the 1st set count:-");
+        int fsize = scan.nextInt();
+        Set<Integer> s1 = new HashSet<>();
+        for(int i=0;i<fsize;i++){
+            s1.add(scan.nextInt());
+        }
+
+        System.out.println("Enter the 2nd set count:-");
+        int ssize = scan.nextInt();
+        Set<Integer> s2 = new HashSet<>();
+        for(int i=0;i<ssize;i++){
+            s2.add(scan.nextInt());
+        }
+
+        Set<Integer> union = new HashSet<>(s1);
+        System.out.print("Unioun of sets is:-");
+        union.addAll(s2);
+        System.out.println(union);
+
+        Set<Integer> intersection = new HashSet<>(s1);
+        System.out.print("intersection of sets is:-");
+        intersection.retainAll(s2);
+        System.out.println(intersection);
+
+        Set<Integer> subtraction = new HashSet<>(s1);
+        System.out.print("subtraction of sets is:-");
+        subtraction.removeAll(s2);
+        System.out.println(subtraction);
+
+
      }
 
      

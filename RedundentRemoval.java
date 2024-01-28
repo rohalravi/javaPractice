@@ -7,7 +7,8 @@ class RedundentRemoval {
         //stringReverseM1();
         //stringReverseM2();
         //firstRedundentVa lue();
-        redundentValueWithCount();
+        //redundentValueWithCount();
+        replaceString("+91 886047333");
     }
 
     public static void stringReverseM1(){
@@ -68,6 +69,13 @@ class RedundentRemoval {
         System.out.println(char_map);
         System.out.println("PPP");
 
+    }
+
+    public static void replaceString(String strVal){
+        String rep = strVal.replaceAll("[+91 ]{4}","00");
+        //rep = rep.replace("+","");
+        
+        System.out.println(rep);
     }
 
 
